@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-lime: #B9FD23;
+    --color-lime-glow: rgba(185, 253, 35, 0.35);
+    --color-bg-dark: #070907;
+    --color-card-dark: #0f120e;
+  }
+
+  body {
+    background-color: #060806;
+    color: #F3F4F6;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-heading {
+    letter-spacing: -0.03em;
+  }
+
+  ::selection {
+    background: #B9FD23;
+    color: #070907;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080A08;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e241c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B9FD23;
+}
+
+/* Glow utilities */
+.lime-glow-sm {
+  box-shadow: 0 0 20px -3px rgba(185, 253, 35, 0.4);
+}
+
+.lime-glow-lg {
+  box-shadow: 0 0 45px -5px rgba(185, 253, 35, 0.3);
+}
+
+.lime-glow-text {
+  text-shadow: 0 0 25px rgba(185, 253, 35, 0.5);
+}
+
+.border-subtle {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.border-lime-subtle {
+  border-color: rgba(185, 253, 35, 0.25);
+}
+
+/* Crosshair indicator */
+.crosshair-mark {
+  position: absolute;
+  color: rgba(185, 253, 35, 0.45);
+  font-family: monospace;
+  font-size: 14px;
+  user-select: none;
+  pointer-events: none;
+}
